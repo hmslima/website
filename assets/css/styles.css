@@ -59,14 +59,24 @@ p {
 ul {
     list-style-position: inside;
   }
+  
+li {
+    padding-bottom: 0.5rem;
+}
+
+li ul {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+}
 
 a {
     text-decoration: none;
-    text-shadow: 1px 1px red;
-    color: black;
-    font-weight: 400;
+    /*text-shadow: 1px 1px red;
+    color: black;*/
+    color: #DD4F4F;
+    font-weight: bold;
 }
-a:visited {color: black}
+a:visited {color: #DD4F4F}
 a:hover {text-decoration: underline;}
 
 h1 {
@@ -77,7 +87,7 @@ h1 {
     text-align: center;
 }
 h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -126,6 +136,10 @@ h3 {
     list-style: none;
 }
 
+.menuItem {
+    margin-bottom: 0;
+}
+
 .menuPrincipalItem {
     display: inline-block;
     padding: 0 2rem;
@@ -142,6 +156,10 @@ h3 {
 .menuLink {
     text-shadow: none;
     font-weight: bold;
+    color: black;
+}
+.menuLink:visited {
+    color: black;
 }
 .menuLink:hover {
     text-decoration: none;
@@ -183,7 +201,8 @@ h3 {
     width: 40%;
     height: 20rem;
     border-radius: 25px;
-    background-color: rgb(153, 153, 102, 0.5);
+    /*background-color: rgb(153, 153, 102, 0.5);*/
+    background-color: rgb(229, 222, 186, 0.5);
     padding: 0.5rem 1rem;
     margin: 0 1rem 1rem 1rem;
 }
@@ -195,7 +214,13 @@ footer {
     font-size: 0.8rem;
 }
 
-@media only screen and (max-width: 1600px) {
+#type {
+    height: 3rem;
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1700px) {
     .menuPrincipalItem {
         font-size: 1.5rem;
     }
@@ -204,7 +229,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1500px) {
     .menuPrincipalItem {
         padding: 0 1rem;
     }
@@ -216,7 +241,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
     .imgLogoMenu {
         display: none;
     }
@@ -235,7 +260,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 950px) {
     .BigContainer {
         width: 90%;
     }
