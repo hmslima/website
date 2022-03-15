@@ -38,7 +38,8 @@ function changeBackground() {
 
 function typewrite (id) {
     div = document.getElementById(id);
-    content = div.innerHTML.split('');
+    //content = div.innerHTML.split('');
+    content = "Welcome to the website of Henrique Matheus da Silva Lima, a Brazilian programmer passionate about software development.".split('');
 
     div.innerHTML = '';
 
