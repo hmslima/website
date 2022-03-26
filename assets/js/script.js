@@ -3,6 +3,7 @@ function changeBackground() {
     let menuLink = document.getElementsByClassName("menuLink");
     let generalLinks = document.querySelectorAll("a"); // I may or a may not be using this one
     let card = document.getElementsByClassName("card");
+    let cardTitle = document.getElementsByClassName("cardTitle");
 
     // Dark mode
     if (background == null || background == "rgb(251, 251, 231)") {
@@ -16,7 +17,8 @@ function changeBackground() {
         }
 
         for (let counter = 0; counter < card.length; counter++) {
-            card[counter].style.backgroundColor = "rgb(135, 82, 82, 0.5)";
+            cardTitle[counter].style.backgroundColor = "#565656";
+            card[counter].style.backgroundColor = "#2A2A2A";
         }
     }
     // Light mode
@@ -31,16 +33,24 @@ function changeBackground() {
         }
 
         for (let counter = 0; counter < card.length; counter++) {
-            card[counter].style.backgroundColor = "rgb(229, 222, 186, 0.5)";
+            cardTitle[counter].style.backgroundColor = "#EEEEEE";
+            card[counter].style.backgroundColor = "#FFFFFF";
         }
     }
 }
 
 function typewrite (id) {
-    div = document.getElementById(id);
-    //content = div.innerHTML.split('');
-    content = "Welcome to the website of Henrique Matheus da Silva Lima, a Brazilian programmer passionate about software development.".split('');
+    let div = document.getElementById(id);
+    let height = document.getElementById(id).offsetHeight;
+    let content = '';
+    if (document.getElementsByTagName('html')[0].getAttribute('lang') == 'pt-br') {
+        content = "Receba boas-vindas ao site de Henrique Matheus da Silva Lima, um programador apaixonado por desenvolvimento de software.".split('');
+    }
+    else {
+        content = "Welcome to the website of Henrique Matheus da Silva Lima, a Brazilian programmer passionate about software development.".split('');
+    }
 
+    document.getElementById(id).style.minHeight = height + "px";
     div.innerHTML = '';
 
     let counter = 0;
@@ -51,6 +61,7 @@ function typewrite (id) {
 
         if (counter == content.length) {
             clearInterval(typeWriteInterval);
+            document.getElementById(id).style.minHeight = 0; // In case I resize the screen
         }
-    }, 100);
+    }, 50);
 }

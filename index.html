@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="assets/js/script.js" defer></script>
 </head>
-<body onload="typewrite('type')">
+<body onload="typewrite('write')">
     <nav>
         <div><img src="img/hmslima.jpg" alt="Photo" class="hiddenLogo imgLogo"></div>
 
@@ -18,7 +18,7 @@
             <ul>
                 <li class="menuItem menuPrincipalItem"><a href="#about" class="menuLink">About</a></li>
                 <li class="menuItem menuPrincipalItem"><a href="#programmingprojects" class="menuLink">Programming projects</a></li>
-                <li class="menuItem menuPrincipalItem"><a href="#otherprojects" class="menuLink">Other projects</a></li>
+                <li class="menuItem menuPrincipalItem"><a href="#miscellaneous" class="menuLink">Miscellaneous</a></li>
             </ul>
 
             <ul class="menuLang">
@@ -33,6 +33,7 @@
     <hr class="hrGeneral hr2">
     <hr class="hrGeneral hr3">
 
+
     <noscript style="background-color: red; font-style: italic;">
         <br><br>
         <p>Your browser has no support for JavaScript, without this technology you cannot properly browser in this website.</p>
@@ -43,8 +44,8 @@
     <section id="about">
         <div class="SmallContainer">
 
-            <div id="type">
-                
+            <div id="write">
+                Welcome to the website of Henrique Matheus da Silva Lima, a Brazilian programmer passionate about software development.
             </div>
 
             <noscript><p>Welcome to the website of Henrique Matheus da Silva Lima, a Brazilian programmer passionate about software development.</p></noscript>
@@ -59,11 +60,20 @@
                     <ul>
                         <li>HTML 5</li>
                         <li>CSS 3</li>
-                        <li>JavaScript / TypeScript</li>
+                        <li>JavaScript
+                            <ul>
+                                <li>Node.js</li>
+                                <li>React.js</li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
-                <li><strong>Java</strong></li>
-                <li><strong>C/C++</strong></li>
+                <li>
+                    <strong>Java</strong>
+                    <ul>
+                        <li>Spring</li>
+                    </ul>
+                </li>
             </ul>
             
             <br><br>
@@ -71,7 +81,7 @@
 
             <br><br>
 
-            <h2>Contact</h2>
+            <h2 id="contact">Contact</h2>
 
             <p><img src="img/github.svg" class="imgText"> <a href="https://github.com/hmslima/" target="_blank">GitHub</a></p>
 
@@ -82,29 +92,39 @@
 
     <section id="programmingprojects" class="new_section">
         <div class="SmallContainer">
-            <h1>Programming Projects</h1>
+            <h1>My Principal Programming Projects</h1>
 
             <div class="cardContainer">
                 <div class="card">
-                    <h3>JS-Dictionar</h3>
-                    <p>A powerful dynamic dictionary contained in a single HTML file.</p>
-                    <br>
-                    <a href="https://github.com/hmslima/JS-Dictionar" target="_blank">GitHub page</a>
+                    <div class="cardTitle">
+                        <h3>JS-Dictionar</h3>
+                    </div>      
+                    <div class="cardBody">      
+                        <p>A powerful dynamic dictionary contained in a single HTML file.</p>
+                        <br>
+                        <a href="https://github.com/hmslima/JS-Dictionar" target="_blank">GitHub page</a>
+                    </div>
                 </div>
 
                 <div class="card">
-                    <h3>JS-Sambahsapronunciator</h3>
-                    <p>A pronunciator of words to IPA and SPT for Sambahsa Mundialect.</p>
-                    <br>
-                    <a href="https://github.com/hmslima/JS-Sambahsapronunciator" target="_blank">GitHub page</a>
+                    <div class="cardTitle">
+                        <h3>JS-Sambahsapronunciator</h3>
+                    </div>
+                    <div class="cardBody">
+                        <p>A pronunciator of words to IPA and SPT for Sambahsa Mundialect.</p>
+                        <br>
+                        <a href="https://github.com/hmslima/JS-Sambahsapronunciator" target="_blank">GitHub page</a>
+                    </div>
                 </div>
             </div>
+
+            <p>If you want to see more projects, see my <a href="https://github.com/hmslima/" target="_blank">GitHub</a>.</p>
         </div>
     </section>
 
-    <section id="otherprojects" class="new_section">
+    <section id="miscellaneous" class="new_section">
         <div class="SmallContainer">
-            <h1>Other Projects</h1>
+            <h1>Miscellaneous</h1>
         </div>
     </section>
 
