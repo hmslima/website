@@ -8,30 +8,24 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="assets/js/script.js" defer></script>
 </head>
-<body onload="typewrite('write')">
+<body onload="start()">
     <nav>
-        <div><img src="assets/img/photos/hmslima.jpg" alt="Photo" class="hiddenLogo imgLogo"></div>
-
-        <div class="BigContainer flex wrap menu">
-            <img src="assets/img/photos/hmslima.jpg" alt="Photo" class="imgLogo imgLogoMenu">
-
-            <ul>
-                <li class="menuItem menuPrincipalItem"><a href="#about" class="menuLink">About</a></li>
-                <li class="menuItem menuPrincipalItem"><a href="#programmingprojects" class="menuLink">Programming projects</a></li>
-                <li class="menuItem menuPrincipalItem"><a href="#miscellaneous" class="menuLink">Miscellaneous</a></li>
-            </ul>
-
-            <ul class="menuLang">
-                <li class="menuItem menuLangItem contrastCharacter"><a href="#" onclick="changeBackground()" class="menuLink">🌓︎</a></li>
-                <li class="menuItem menuLangItem">Em Português</li>
-                <li class="menuItem menuLangItem">En Español</li>
-            </ul>
+        <div class="logo">HMSLIMA</div>
+        <div class="navButtonWrapper">
+            <a class="navLink generalMenuButton changeBackgroundButton" href="#">
+                🌜︎
+            </a>
+            <a class="generalMenuButton hamburgerMenu" href="#">
+                <img src="assets/img/icons/hmenu.svg" class="hamburgerMenuBar">
+            </a>
         </div>
     </nav>
-
-    <hr class="hrGeneral hr1">
-    <hr class="hrGeneral hr2">
-    <hr class="hrGeneral hr3">
+    <div class="nav_space"></div>
+    <div id="menu">
+        <a class="navLink menuItemLink" href="#about">About</a>
+        <a class="navLink menuItemLink" href="#programmingprojects">Programing projects</a>
+        <a class="navLink menuItemLink" href="#miscellaneous">Miscellaneous</a>
+    </div>
 
 
     <noscript style="background-color: red; font-style: italic;">
@@ -44,6 +38,7 @@
     <section id="about">
         <div class="SmallContainer">
 
+            <br>
             <div id="write">
                 Welcome to the website of Henrique Matheus da Silva Lima, a Brazilian programmer passionate about software development.
             </div>

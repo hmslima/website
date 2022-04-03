@@ -1,6 +1,7 @@
+let = menuActive = false;
+
 function changeBackground() {
     let background = getComputedStyle(document.body).backgroundColor;
-    let menuLink = document.getElementsByClassName("menuLink");
     let generalLinks = document.querySelectorAll("a"); // I may or a may not be using this one
     let card = document.getElementsByClassName("card");
     let cardTitle = document.getElementsByClassName("cardTitle");
@@ -9,14 +10,10 @@ function changeBackground() {
 
     // Dark mode
     if (background == null || background == "rgb(251, 251, 231)") {
+        document.getElementsByClassName("changeBackgroundButton")[0].innerHTML="🌞︎";
+
         document.body.style.backgroundColor = "#444444"; // #444444 / rgb(68, 68, 68)
         document.body.style.color = "#F1FBE7"; // #F1FBE7 / rgb(241, 251, 231)
-
-        for (let counter = 0; counter < menuLink.length; counter++) {
-            if (menuLink[counter].classList.contains("menuLink")) {
-                menuLink[counter].style.color = "#F1FBE7";
-            }
-        }
 
         for (let counter = 0; counter < card.length; counter++) {
             cardTitle[counter].style.backgroundColor = "#565656";
@@ -31,14 +28,10 @@ function changeBackground() {
     }
     // Light mode
     else {
+        document.getElementsByClassName("changeBackgroundButton")[0].innerHTML="🌜︎";
+
         document.body.style.backgroundColor = "#FBFBE7"; // #FBFBE7 / rgb(251, 251, 231)
         document.body.style.color = "#000000"; // #000000 / rgb(0, 0, 0)
-
-        for (let counter = 0; counter < menuLink.length; counter++) {
-            if (menuLink[counter].classList.contains("menuLink")) {
-                menuLink[counter].style.color = "#000000";
-            }
-        }
 
         for (let counter = 0; counter < card.length; counter++) {
             cardTitle[counter].style.backgroundColor = "#EEEEEE";
@@ -51,6 +44,32 @@ function changeBackground() {
             cardTitleStacks[counter].style.borderColor = "#000000";
         }
     }
+}
+
+function getClicks() {
+    let menu = document.getElementById("menu");
+    document.addEventListener("click", event => {
+        if ((event.target.classList.contains("hamburgerMenu") || event.target.classList.contains("hamburgerMenuBar")) && menuActive == false) {
+            menuActive = true;
+            menu.style.display = "block";
+            event.preventDefault();
+        }
+        else if ((event.target.classList.contains("hamburgerMenu") || event.target.classList.contains("hamburgerMenuBar")) && menuActive == true) {
+            menuActive = false;
+            menu.style.display = "none";
+            event.preventDefault();
+        }
+        else if (event.target.classList.contains("changeBackgroundButton")) {
+            changeBackground();
+            event.preventDefault();
+        }
+        else {
+            if (menuActive && !event.target.classList.contains("menuItemLink")) {
+                menuActive = false;
+                menu.style.display = "none";
+            }
+        }
+    });
 }
 
 function typewrite (id) {
@@ -78,4 +97,9 @@ function typewrite (id) {
             document.getElementById(id).style.minHeight = 0; // In case I resize the screen
         }
     }, 50);
+}
+
+function start() {
+    typewrite ("write");
+    getClicks();
 }

@@ -1,7 +1,5 @@
 :root {
-    --gapTopHeader: 1rem;
-    --headerHeight: 6rem;
-    --headerSmallHeight: 4rem;
+    --navSize: 3rem;
 }
 
 * {
@@ -47,6 +45,78 @@ body {
     background-color: #FBFBE7;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: var(--navSize);
+    background-color: #800000;
+}
+
+.nav_space {
+    height: var(--navSize);
+}
+
+.navLink {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: 10rem;
+}
+
+.navButtonWrapper {
+    display: flex;
+}
+
+.generalMenuButton {
+    width: var(--navSize);
+    height: var(--navSize);
+}
+
+.generalMenuButton:hover {
+    background-color: #520808;
+}
+
+.changeBackgroundButton {
+    font-family: 'Noto Emoji';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#menu {
+    display: none;
+    position: fixed;
+    right: 0;
+    padding: 0.3rem;
+    background-color: #aa1d1d;
+}
+
+.menuItemLink {
+    display: block;
+    padding: 0.3rem;
+    text-align: right;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
 section {
     min-height: 50vh;
 }
@@ -69,13 +139,13 @@ li ul {
     margin-left: 2rem;
 }
 
-a {
+a:not(.navLink) {
     text-decoration: none;
     color: #DD4F4F;
     font-weight: bold;
 }
-a:visited {color: #DD4F4F}
-a:hover {text-decoration: underline;}
+a:visited:not(.navLink) {color: #DD4F4F}
+a:hover:not(.navLink) {text-decoration: underline;}
 
 h1 {
     font-variant: small-caps;
@@ -114,70 +184,10 @@ h3 {
     flex-wrap: wrap;
 }
 
-.hiddenLogo {
-    display: none;
-}
-
-.imgLogo {
-    margin-top: var(--gapTopHeader);
-    height: var(--headerHeight);
-    border-radius: 50%;
-}
-
-.menu {
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu ul {
-    list-style: none;
-}
-
-.menuItem {
-    margin-bottom: 0;
-}
-
-.menuPrincipalItem {
-    display: inline-block;
-    padding: 0 2rem;
-    font-size: 2rem;
-}
-
-.menuLangItem {
-    display: block;
-    text-align: center;
-    font-size: 0.8rem;
-    padding-bottom: 0.5rem;
-}
-
-.menuLink {
-    text-shadow: none;
-    font-weight: bold;
-    color: black;
-}
-.menuLink:visited {
-    color: black;
-}
-.menuLink:hover {
-    text-decoration: none;
-    text-shadow: 2px 2px 10px #FF0000;
-}
-.menuLink:active {
-    text-shadow: 2px 2px 10px #00FF44;
-}
-
 .contrastCharacter {
     font-family: 'Noto Emoji';
     margin-bottom: 0.5rem;
 }
-
-.hrGeneral {
-    margin: auto;
-    margin-bottom: 0.3rem;
-}
-.hr1 {width: 90%; margin-top: 1rem;}
-.hr2 {width: 70%;}
-.hr3 {width: 50%; margin-bottom: 1rem;}
 
 .imgText {
     height: 1.5rem;
@@ -272,18 +282,15 @@ footer {
 }
 
 @media only screen and (max-width: 1700px) {
-    .menuPrincipalItem {
-        font-size: 1.5rem;
-    }
     .SmallContainer {
         width: 60%;
+    }
+    .logo {
+        margin-left: 8rem;
     }
 }
 
 @media only screen and (max-width: 1500px) {
-    .menuPrincipalItem {
-        padding: 0 1rem;
-    }
     .BigContainer {
         width: 80%;
     }
@@ -293,21 +300,14 @@ footer {
 }
 
 @media only screen and (max-width: 1200px) {
-    .imgLogoMenu {
-        display: none;
-    }
-    .hiddenLogo {
-        display: block;
-        margin: var(--gapTopHeader) auto var(--gapTopHeader) auto;
-    }
     .BigContainer {
         width: 90%;
     }
     .SmallContainer {
         width: 80%;
     }
-    .menuLangItem{
-        padding-bottom: 0.5rem;
+    .logo {
+        margin-left: 6rem;
     }
 }
 
@@ -315,19 +315,8 @@ footer {
     .BigContainer {
         width: 90%;
     }
-    .menu {
-        display: block;
-        text-align: center;
-    }
-    .menuLang {
-        margin-top: 1rem;
-    }
-    .menuPrincipalItem {
-        padding-bottom: 0.8rem;
-    }
-    .menuLangItem{
-        display: inline-block;
-        padding: 0 1rem;
+    .logo {
+        margin-left: 5rem;
     }
 }
 
@@ -335,11 +324,17 @@ footer {
     .card {
         width: 80%;
     }
+    .logo {
+        margin-left: 4rem;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     .cardBodyStacks {
         justify-content: space-around;
+    }
+    .logo {
+        margin-left: 1rem;
     }
 }
 
