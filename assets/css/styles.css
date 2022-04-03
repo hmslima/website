@@ -194,6 +194,15 @@ h3 {
     flex-wrap: wrap;
 }
 
+.titleCenter {
+    text-align: center;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
 .card {
     width: 40%;
     height: 20rem;
@@ -214,14 +223,14 @@ h3 {
 }
 
 .cardStacks {
-    border: 5px solid black;
+    border: 3px solid black;
     border-radius: 25px;
     width: 100%;
     margin-bottom: 1rem;
 }
 
 .cardTitleStacks {
-    border-bottom: 5px solid black;
+    border-bottom: 3px solid black;
     overflow-wrap: break-word;
     padding: 0.3rem 0.5rem 0.3rem 0.5rem;
     font-weight: bold;
@@ -229,16 +238,15 @@ h3 {
     font-size: 1.5rem;
 }
 
-.cardBody {
+.cardBodyStacks {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: baseline;
     padding: 0.5rem 1rem;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .stack {
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -326,6 +334,12 @@ footer {
 @media only screen and (max-width: 850px) {
     .card {
         width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .cardBodyStacks {
+        justify-content: space-around;
     }
 }
 
