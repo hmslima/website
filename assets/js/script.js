@@ -4,6 +4,8 @@ function changeBackground() {
     let generalLinks = document.querySelectorAll("a"); // I may or a may not be using this one
     let card = document.getElementsByClassName("card");
     let cardTitle = document.getElementsByClassName("cardTitle");
+    let cardStacks = document.getElementsByClassName("cardStacks");
+    let cardTitleStacks = document.getElementsByClassName("cardTitleStacks");
 
     // Dark mode
     if (background == null || background == "rgb(251, 251, 231)") {
@@ -19,6 +21,12 @@ function changeBackground() {
         for (let counter = 0; counter < card.length; counter++) {
             cardTitle[counter].style.backgroundColor = "#565656";
             card[counter].style.backgroundColor = "#2A2A2A";
+            card[counter].style.borderColor = "#FFFFFF";
+        }
+
+        for (let counter = 0; counter < cardStacks.length; counter++) {
+            cardStacks[counter].style.borderColor = "#FFFFFF";
+            cardTitleStacks[counter].style.borderColor = "#FFFFFF";
         }
     }
     // Light mode
@@ -35,6 +43,12 @@ function changeBackground() {
         for (let counter = 0; counter < card.length; counter++) {
             cardTitle[counter].style.backgroundColor = "#EEEEEE";
             card[counter].style.backgroundColor = "#FFFFFF";
+            card[counter].style.borderColor = "#000000";
+        }
+
+        for (let counter = 0; counter < cardStacks.length; counter++) {
+            cardStacks[counter].style.borderColor = "#000000";
+            cardTitleStacks[counter].style.borderColor = "#000000";
         }
     }
 }
