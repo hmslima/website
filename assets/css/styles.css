@@ -117,6 +117,10 @@ nav {
     font-size: 1.2rem;
 }
 
+.menuItemLink:hover {
+    background-color: #520808;
+}
+
 .imgTextIntroduction {
     display: flex;
 }
