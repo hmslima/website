@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,46 +9,60 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="assets/js/script.js" defer></script>
 </head>
+
 <body onload="start()">
     <nav>
-        <div class="logo">HMSLIMA</div>
-        <div class="navButtonWrapper">
-            <a class="navLink generalMenuButton changeBackgroundButton" href="#">
-                🌜︎
-            </a>
-            <a class="generalMenuButton hamburgerMenu" href="#">
-                <img src="assets/img/icons/hmenu.svg" class="hamburgerMenuBar">
-            </a>
+        <div class="container">
+            <div class="nav-flex">
+                <div class="logo">HMSLIMA</div>
+                <div class="navButtonWrapper">
+                    <a class="navLink generalMenuButton changeBackgroundButton" href="#">
+                        🌜︎
+                    </a>
+                    <a class="generalMenuButton hamburgerMenu" href="#">
+                        <img src="assets/img/icons/hmenu.svg" class="hamburgerMenuBar">
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
     <div class="nav_space"></div>
-    <div id="menu">
-        <a class="navLink menuItemLink" href="#my_stacks">My Stacks</a>
-        <a class="navLink menuItemLink" href="#contact">Contact</a>
-        <a class="navLink menuItemLink" href="#programmingprojects">Programing projects</a>
-        <a class="navLink menuItemLink" href="#miscellaneous">Miscellaneous</a>
+    <div class="container container-right">
+        <div id="menu">
+            <a class="navLink menuItemLink" href="#my_stacks">My Stacks</a>
+            <a class="navLink menuItemLink" href="#contact">Contact</a>
+            <a class="navLink menuItemLink" href="#programmingprojects">Programing projects</a>
+            <a class="navLink menuItemLink" href="#miscellaneous">Miscellaneous</a>
+        </div>
     </div>
 
 
     <noscript style="background-color: red; font-style: italic;">
         <br><br>
-        <p>Your browser has no support for JavaScript, without this technology you cannot properly browser in this website.</p>
+        <p>Your browser has no support for JavaScript, without this technology you cannot properly browser in this
+            website.</p>
 
-        <p>Please activate support for this technology in your browser or use one with support for it like <a href="https://www.mozilla.org/firefox/" target="_blank">Mozilla Firefox</a> or <a href="https://www.google.com/intl/chrome/" target="_blank">Google Chrome</a>.</p>
+        <p>Please activate support for this technology in your browser or use one with support for it like <a
+                href="https://www.mozilla.org/firefox/" target="_blank">Mozilla Firefox</a> or <a
+                href="https://www.google.com/intl/chrome/" target="_blank">Google Chrome</a>.</p>
     </noscript>
 
     <section id="about">
-        <div class="SmallContainer">
+        <div class="container">
 
             <br>
             <div class="imgTextIntroduction">
                 <img src="assets/img/photos/hmslima.jpg" class="mainPhoto">
                 <div id="write">
-                    Welcome to the website of Henrique Matheus da Silva Lima, a Brazilian programmer passionate about software development.
+                    Welcome to the website of Henrique Matheus da Silva Lima, a Brazilian programmer passionate about
+                    software development.
                 </div>
             </div>
-            
-            <noscript><p>Welcome to the website of Henrique Matheus da Silva Lima, a Brazilian programmer passionate about software development.</p></noscript>
+
+            <noscript>
+                <p>Welcome to the website of Henrique Matheus da Silva Lima, a Brazilian programmer passionate about
+                    software development.</p>
+            </noscript>
 
 
             <div class="nav_space" id="my_stacks"></div>
@@ -65,6 +80,10 @@
                         <div class="stack">
                             JDBC
                             <img src="assets/img/stacks/jdbc.svg" alt="JDBC">
+                        </div>
+                        <div class="stack">
+                            Hibernate
+                            <img src="assets/img/stacks/hibernate.svg" alt="Hibernate">
                         </div>
                         <div class="stack">
                             Spring
@@ -125,6 +144,10 @@
                             <img src="assets/img/stacks/designpatterns.svg" alt="Design Patterns">
                         </div>
                         <div class="stack">
+                            Git
+                            <img src="assets/img/stacks/git.svg" alt="Git">
+                        </div>
+                        <div class="stack">
                             Scrum
                             <img src="assets/img/stacks/scrum.svg" alt="Scrum">
                         </div>
@@ -132,7 +155,7 @@
                 </div>
 
             </div>
-            
+
             <br>
             <p>You can see what I can do in <a href="#programmingprojects">Programming projects</a>.</p>
 
@@ -140,28 +163,32 @@
             <div class="nav_space" id="contact"></div>
             <h1>Contact</h1>
 
-            <p><img src="assets/img/icons/email.svg" class="imgText"> <a href="mailto:hmslima1992@gmail.com" target="_blank">E-mail</a></p>
+            <p><img src="assets/img/icons/email.svg" class="imgText"> <a href="mailto:hmslima1992@gmail.com"
+                    target="_blank">E-mail</a></p>
 
-            <p><img src="assets/img/icons/github.svg" class="imgText"> <a href="https://github.com/hmslima/" target="_blank">GitHub</a></p>
+            <p><img src="assets/img/icons/github.svg" class="imgText"> <a href="https://github.com/hmslima/"
+                    target="_blank">GitHub</a></p>
 
-            <p><img src="assets/img/icons/linkedin.svg" class="imgText"> <a href="https://www.linkedin.com/in/henrique-matheus-da-silva-lima/" target="_blank">LinkedIn</a></p>
+            <p><img src="assets/img/icons/linkedin.svg" class="imgText"> <a
+                    href="https://www.linkedin.com/in/henrique-matheus-da-silva-lima/" target="_blank">LinkedIn</a></p>
 
-            <p><img src="assets/img/icons/twitter.svg" class="imgText"> <a href="https://twitter.com/hmslima_" target="_blank">Twitter</a></p>
+            <p><img src="assets/img/icons/twitter.svg" class="imgText"> <a href="https://twitter.com/hmslima_"
+                    target="_blank">Twitter</a></p>
 
         </div>
     </section>
 
     <section class="new_section">
         <div class="nav_space" id="programmingprojects"></div>
-        <div class="SmallContainer">
+        <div class="container">
             <h1>My Principal Programming Projects</h1>
 
             <div class="cardContainer">
                 <div class="card">
                     <div class="cardTitle">
                         <h3>JS-Dictionar</h3>
-                    </div>      
-                    <div class="cardBody">      
+                    </div>
+                    <div class="cardBody">
                         <p>A powerful dynamic dictionary contained in a single HTML file.</p>
                         <br>
                         <a href="https://github.com/hmslima/JS-Dictionar" target="_blank">GitHub page</a>
@@ -180,17 +207,19 @@
                 </div>
             </div>
 
-            <p>If you want to see more projects, see my <a href="https://github.com/hmslima/" target="_blank">GitHub</a>.</p>
+            <p>If you want to see more projects, see my <a href="https://github.com/hmslima/"
+                    target="_blank">GitHub</a>.</p>
         </div>
     </section>
 
     <section class="new_section">
         <div id="miscellaneous"></div>
-        <div class="SmallContainer">
+        <div class="container">
             <h1>Miscellaneous</h1>
         </div>
     </section>
 
     <footer>Copyright © Henrique Matheus da Silva Lima.</footer>
 </body>
+
 </html>

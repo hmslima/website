@@ -46,13 +46,16 @@ body {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
     width: 100%;
     height: var(--navSize);
     background-color: #800000;
+    position: fixed;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav_space {
@@ -68,7 +71,6 @@ nav {
     color: #FFFFFF;
     font-weight: bold;
     font-size: 1.5rem;
-    margin-left: 10rem;
 }
 
 .navButtonWrapper {
@@ -103,7 +105,7 @@ nav {
 #menu {
     display: none;
     position: fixed;
-    right: 0;
+    float: right;
     padding: 0.3rem;
     background-color: #aa1d1d;
 }
@@ -184,10 +186,15 @@ h3 {
     max-width: 1200px;
 }
 
-.SmallContainer {
+.container {
     width: 50%;
     margin: auto;
     max-width: 1200px;
+}
+
+.container-right {
+    display: flex;
+    justify-content: flex-end
 }
 
 .flex {
@@ -282,7 +289,7 @@ footer {
 }
 
 @media only screen and (max-width: 1700px) {
-    .SmallContainer {
+    .container {
         width: 60%;
     }
     .logo {
@@ -294,7 +301,7 @@ footer {
     .BigContainer {
         width: 80%;
     }
-    .SmallContainer {
+    .container {
         width: 70%;
     }
 }
@@ -303,7 +310,7 @@ footer {
     .BigContainer {
         width: 90%;
     }
-    .SmallContainer {
+    .container {
         width: 80%;
     }
     .logo {
