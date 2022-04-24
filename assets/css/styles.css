@@ -292,9 +292,6 @@ footer {
     .container {
         width: 60%;
     }
-    .logo {
-        margin-left: 8rem;
-    }
 }
 
 @media only screen and (max-width: 1500px) {
@@ -313,17 +310,11 @@ footer {
     .container {
         width: 80%;
     }
-    .logo {
-        margin-left: 6rem;
-    }
 }
 
 @media only screen and (max-width: 950px) {
     .BigContainer {
         width: 90%;
-    }
-    .logo {
-        margin-left: 5rem;
     }
     .imgTextIntroduction {
         display: block;
@@ -340,17 +331,11 @@ footer {
     .card {
         width: 80%;
     }
-    .logo {
-        margin-left: 4rem;
-    }
 }
 
 @media only screen and (max-width: 600px) {
     .cardBodyStacks {
         justify-content: space-around;
-    }
-    .logo {
-        margin-left: 1rem;
     }
 }
 
