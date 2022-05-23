@@ -84,13 +84,7 @@ function getClicks() {
 function typewrite (id) {
     let div = document.getElementById(id);
     let height = document.getElementById(id).offsetHeight;
-    let content = '';
-    if (document.getElementsByTagName('html')[0].getAttribute('lang') == 'pt-br') {
-        content = "Receba boas-vindas ao site de Henrique Matheus da Silva Lima, um programador apaixonado por desenvolvimento de software.".split('');
-    }
-    else {
-        content = "Welcome to the website of Henrique Matheus da Silva Lima, a Brazilian programmer passionate about software development.".split('');
-    }
+    let content = document.getElementById(id).innerText;
 
     document.getElementById(id).style.minHeight = height + "px";
     div.innerHTML = '';
