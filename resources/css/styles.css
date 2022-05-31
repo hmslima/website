@@ -42,13 +42,16 @@ html {
 
 body {
     font-family: 'Dejavu Serif';
-    background-color: #FBFBE7; /* Don't forget to update the JavaScript file... */
+    /* Don't forget to update the background in the JavaScript file!!! */
+    background-color: #FBFBE7; 
+    background-image: url(../img/background/bg-light.jpg);
 }
 
 nav {
     width: 100%;
     height: var(--navSize);
-    background-color: #800000;
+    /*background-color: #800000;*/
+    background-image: url(../img/background/wood.jpg);
     position: fixed;
     z-index: 1;
 }
@@ -108,7 +111,8 @@ nav {
     position: fixed;
     float: right;
     padding: 0.3rem;
-    background-color: #aa1d1d;
+    /*background-color: #aa1d1d;*/
+    background-color: #644030;
     z-index: 1;
 }
 
@@ -233,7 +237,8 @@ h3 {
 
 .cardTitle {
     overflow-wrap: break-word;
-    background-color: #EEEEEE;
+    /*background-color: #EEEEEE;*/
+    background-image: url(../img/background/metal.jpg);
     padding: 0.3rem 0.5rem 0.3rem 0.5rem;
 }
 
@@ -242,16 +247,20 @@ h3 {
 }
 
 .cardStacks {
-    border: 3px solid black;
+    background-color: #FFFFFF;
     border-radius: 25px;
     width: 100%;
     margin-bottom: 1rem;
+    box-shadow: #000 2px 3px 2px;
 }
 
 .cardTitleStacks {
-    border-bottom: 3px solid black;
+    /*background-color:  #58D68D;*/
+    background-image: url(../img/background/green-paper.jpg);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
     overflow-wrap: break-word;
-    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    padding: 0.3rem 0.5rem 0.3rem 1rem;
     font-weight: bold;
     font-variant: small-caps;
     font-size: 1.5rem;

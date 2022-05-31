@@ -2,33 +2,39 @@ let = menuActive = false;
 
 function changeBackground() {
     let background = getComputedStyle(document.body).backgroundColor;
-    let generalLinks = document.querySelectorAll("a"); // I may or a may not be using this one
+    let generalLinks = document.querySelectorAll("a");
+    let menuLinks = document.getElementsByClassName("navLink");
+    let linkWithWhiteBg = document.getElementsByClassName("linkWithWhiteBg");
     let card = document.getElementsByClassName("card");
-    let cardTitle = document.getElementsByClassName("cardTitle");
     let cardStacks = document.getElementsByClassName("cardStacks");
-    let cardTitleStacks = document.getElementsByClassName("cardTitleStacks");
-    let svgStack = document.getElementsByClassName("svgStack");
 
     // Dark mode
     if (background == null || background == "rgb(251, 251, 231)") {
         document.getElementsByClassName("changeBackgroundButton")[0].innerHTML="🌞︎";
 
         document.body.style.backgroundColor = "#444444"; // #444444 / rgb(68, 68, 68)
+        document.body.style.backgroundImage = "url(resources/img/background/bg-dark.jpg)";
         document.body.style.color = "#F1FBE7"; // #F1FBE7 / rgb(241, 251, 231)
 
+        for (let counter = 0; counter < generalLinks.length; counter++) {
+            generalLinks[counter].style.color = "#EAEAFA";
+        }
+        for (let counter = 0; counter < menuLinks.length; counter++) {
+            menuLinks[counter].style.color = "#FFFFFF";
+        }
+        for (let counter = 0; counter < linkWithWhiteBg.length; counter++) {
+            linkWithWhiteBg[counter].style.color = "#DD4F4F";
+        }
+
         for (let counter = 0; counter < card.length; counter++) {
-            cardTitle[counter].style.backgroundColor = "#565656";
-            card[counter].style.backgroundColor = "#2A2A2A";
+            card[counter].style.color = "#000000";
             card[counter].style.borderColor = "#FFFFFF";
+            card[counter].style.backgroundColor = "#FBFBE7";
         }
 
         for (let counter = 0; counter < cardStacks.length; counter++) {
-            cardStacks[counter].style.borderColor = "#FFFFFF";
-            cardTitleStacks[counter].style.borderColor = "#FFFFFF";
-        }
-
-        for (let counter = 0; counter < svgStack.length; counter++) {
-            svgStack[counter].style.filter = "drop-shadow( 4px 4px 2px #FFFFD9)";
+            cardStacks[counter].style.color = "#000000";
+            cardStacks[counter].style.backgroundColor = "#FBFBE7";
         }
     }
     // Light/original mode
@@ -36,21 +42,26 @@ function changeBackground() {
         document.getElementsByClassName("changeBackgroundButton")[0].innerHTML="🌜︎";
 
         document.body.style.backgroundColor = "#FBFBE7"; // #FBFBE7 / rgb(251, 251, 231)
+        document.body.style.backgroundImage = "url(resources/img/background/bg-light.jpg)";
         document.body.style.color = "#000000"; // #000000 / rgb(0, 0, 0)
 
+        for (let counter = 0; counter < generalLinks.length; counter++) {
+            generalLinks[counter].style.color = "#DD4F4F";
+        }
+        for (let counter = 0; counter < menuLinks.length; counter++) {
+            menuLinks[counter].style.color = "#FFFFFF";
+        }
+        for (let counter = 0; counter < linkWithWhiteBg.length; counter++) {
+            linkWithWhiteBg[counter].style.color = "#DD4F4F";
+        }
+
         for (let counter = 0; counter < card.length; counter++) {
-            cardTitle[counter].style.backgroundColor = "#EEEEEE";
-            card[counter].style.backgroundColor = "#FFFFFF";
             card[counter].style.borderColor = "#000000";
+            card[counter].style.backgroundColor = "#FFFFFF";
         }
 
         for (let counter = 0; counter < cardStacks.length; counter++) {
-            cardStacks[counter].style.borderColor = "#000000";
-            cardTitleStacks[counter].style.borderColor = "#000000";
-        }
-
-        for (let counter = 0; counter < svgStack.length; counter++) {
-            svgStack[counter].style.filter = "drop-shadow( 4px 4px 2px #383837";
+            cardStacks[counter].style.backgroundColor = "#FFFFFF";
         }
     }
 }
