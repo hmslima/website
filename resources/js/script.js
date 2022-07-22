@@ -113,7 +113,75 @@ function typewrite (id) {
     }, 50);
 }
 
+async function getHtml(lang, fileName) {
+    const result = await fetch(`/resources/html/${lang}/${fileName}.html`).then(response => response.text());
+    return result;
+}
+
+function changeSmallText(id, newText) {
+    document.getElementById(id).innerHTML = newText;
+}
+
+function changeElementContent(lang, fileName) {
+    // fileName refer to both HTML file and DIV id, both things must have the same name!
+    getHtml(lang, fileName).then(response => {
+        document.getElementById(fileName).innerHTML = response;
+    });
+}
+
+function changeLanguage(lang) {
+    changeElementContent(lang, 'menu');
+    changeElementContent(lang, 'write');
+
+    if (lang == 'ptbr') {
+        changeSmallText('my_stacks_', "Conjunto de tecnologias");
+        changeSmallText('java_development_', "Desenvolvimento Java");
+        changeSmallText('microservices_', "Microsserviços");
+        changeSmallText('other_languages_', "Outras Linguagens");
+        changeSmallText('more_backend_technologies_', "Mais Tecnologias de Back-end");
+        changeSmallText('tools_', "Ferramentas");
+        changeSmallText('concepts_', "Conceitos");
+        changeSmallText('contact_', "Contato");
+        changeSmallText('resume_', "Currículo");
+        changeSmallText('programmingprojects_', "Meus principais projetos de programação");     
+    }
+    else {
+        changeSmallText('my_stacks_', "My Stacks");
+        changeSmallText('java_development_', "Java Development");
+        changeSmallText('microservices_', "Microservices");
+        changeSmallText('other_languages_', "Other Languages");
+        changeSmallText('more_backend_technologies_', "More Back-end Technologies");
+        changeSmallText('tools_', "Tools");
+        changeSmallText('concepts_', "Concepts");
+        changeSmallText('contact_', "Contact");
+        changeSmallText('resume_', "Resume <i>(in Portuguese)</i>");
+        changeSmallText('programmingprojects_', "My Main Programming Projects");
+    }
+    
+}
+
 function start() {
-    typewrite ("write");
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const language = urlParams.get('lang')
+
+    // Change the language
+    if (language == 'ptbr') {
+        changeLanguage('ptbr');
+    }
+    else {
+        changeLanguage('en');
+    }
+
+    // Set the effect of typing
+    let timeout = setInterval(() => {
+        const writeElement = document.getElementById('write');
+        if (writeElement.innerHTML != null) {
+            typewrite ("write");
+            clearInterval(timeout);
+        }
+    }, 200);
+    
+    // Well, get the clicks
     getClicks();
 }

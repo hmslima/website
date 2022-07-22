@@ -129,6 +129,11 @@ nav {
     background-color: #520808;
 }
 
+.menuLang {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
 .imgTextIntroduction {
     display: flex;
 }
@@ -224,6 +229,10 @@ h3 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    /*overflow: auto;
+    height: 50vh;
+    padding-left: 1rem;
+    padding-right: 1rem;*/
 }
 
 .card {
