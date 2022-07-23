@@ -149,16 +149,46 @@ function changeLanguage(lang, currentLocation) {
 function start() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const language = urlParams.get('lang')
+    const language = urlParams.get('lang');
+    const page = urlParams.get('page');
+    const mode = urlParams.get('mode');
 
     // Change the language
     if (language == 'ptbr') {
-        changeLanguage('ptbr', 'home');
         document.getElementsByTagName('html')[0].setAttribute("lang","pt-BR");
+        if (page == 'pro') {
+            changeLanguage('ptbr', page);
+        }
+        else if (page == 'projects') {
+            changeLanguage('ptbr', page);
+        }
+        else if (page == 'settings') {
+            changeLanguage('ptbr', page);
+        }
+        else {
+            changeLanguage('ptbr', 'home');
+        }
     }
     else {
-        changeLanguage('en', 'home');
         document.getElementsByTagName('html')[0].setAttribute("lang","en");
+        if (page == 'pro') {
+            changeLanguage('en', page);
+        }
+        else if (page == 'projects') {
+            changeLanguage('en', page);
+        }
+        else if (page == 'settings') {
+            changeLanguage('en', page);
+        }
+        else {
+            changeLanguage('en', 'home');
+        }
+    }
+    if (mode == 'dark') {
+        changeBackgroundToDark();
+    }
+    else {
+        changeBackgroundToLight();
     }
     
     // Well, get the clicks
