@@ -56,12 +56,6 @@ nav {
     z-index: 1;
 }
 
-.nav-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .nav_space {
     height: var(--navSize);
 }
@@ -71,33 +65,68 @@ nav {
     text-decoration: none;
 }
 
+.mobileMenuContainer {
+    display: none;
+    justify-content: flex-end;
+}
+
+.desktopMenuContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 100%;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 100%;
+}
+
 .logo {
     color: #FFFFFF;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .navButtonWrapper {
     display: flex;
 }
 
-.generalMenuButton {
+.generalBoxedMenuButton {
     width: var(--navSize);
     height: var(--navSize);
 }
 
+.desktopMenuContainer .generalMenuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-width: var(--navSize);
+    text-transform: uppercase;
+}
+
+#sub-menu .generalMenuButton {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-width: var(--navSize);
+    font-variant: small-caps;
+    justify-content: flex-end;
+}
+
 .generalMenuButton:hover {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
     background-color: #520808;
 }
 
-.changeBackgroundButton {
+.notoEmoji {
     font-family: 'Noto Emoji';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 1.5rem;
 }
 
 .hamburgerMenu {
@@ -105,24 +134,19 @@ nav {
     flex-direction: column;
     justify-content: space-evenly;
 }
+.hamburgerMenuBars {
+   height: 3rem; 
+}
 
-#menu {
+#sub-menu {
     display: none;
     position: fixed;
     float: right;
     padding: 0.3rem;
+    min-width: 10rem;
     /*background-color: #aa1d1d;*/
     background-color: #644030;
     z-index: 1;
-}
-
-.menuItemLink {
-    display: block;
-    padding: 0.3rem;
-    text-align: right;
-    font-variant: small-caps;
-    font-weight: bold;
-    font-size: 1.2rem;
 }
 
 .menuItemLink:hover {
@@ -136,6 +160,11 @@ nav {
 
 .imgTextIntroduction {
     display: flex;
+}
+
+.mainBox {
+    margin-top: 1rem;
+    min-height: 80vh;
 }
 
 .mainPhoto {
@@ -212,6 +241,24 @@ h3 {
     display: flex;
 }
 
+.flex-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.changeBackgroundButton {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-style: solid;
+    border-radius: 50px;
+}
+
 .wrap {
     flex-wrap: wrap;
 }
@@ -229,10 +276,6 @@ h3 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /*overflow: auto;
-    height: 50vh;
-    padding-left: 1rem;
-    padding-right: 1rem;*/
 }
 
 .card {
@@ -307,7 +350,9 @@ footer {
     font-size: 0.8rem;
 }
 
-#write {
+#presentation-paragraph {
+    display: flex;
+    align-items: center;
     font-family: 'Courier New', monospace;
     font-size: 1.5rem;
 }
@@ -345,6 +390,12 @@ footer {
 @media only screen and (max-width: 950px) {
     .BigContainer {
         width: 90%;
+    }
+    .desktopMenuContainer {
+        display: none;
+    }
+    .mobileMenuContainer {
+        display: flex;
     }
     .imgTextIntroduction {
         display: block;

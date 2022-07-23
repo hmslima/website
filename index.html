@@ -1,273 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HMSLIMA</title>
-    <link rel="stylesheet" href="resources/css/styles.css">
-    <script src="resources/js/script.js" defer></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HMSLIMA</title>
+        <link rel="stylesheet" href="resources/css/styles.css">
+        <script src="resources/js/script.js" defer></script>
+    </head>
 
-<body onload="start()">
+    <body onload="start()">
 
-    <!-- Load the dark background image, thus, when the user change to dark mode, (s)he doesn't see the loading -->
-    <div style="display: none;"><img src="resources/img/background/bg-dark.jpg"></div>
+        <!-- Load the dark background image, thus, when the user change to dark mode, (s)he doesn't see the loading -->
+        <div style="display: none;"><img src="resources/img/background/bg-dark.jpg"></div>
 
-    <nav>
-        <div class="container">
-            <div class="nav-flex">
+        <nav>
+            <div class="container flex-menu">
                 <div class="logo">HMSLIMA</div>
-                <div class="navButtonWrapper">
-                    <a class="navLink generalMenuButton changeBackgroundButton" href="#">
-                        🌜︎
+                <div class="desktopMenuContainer" id="desktopMenuContainerId">
+                </div>
+                <div class="mobileMenuContainer">
+                    <a class="generalMenuButton hamburgerMenu generalBoxedMenuButton" href="#">
+                        <img src="resources/img/icons/hmenu.svg" class="hamburgerMenuBars">
                     </a>
-                    <a class="generalMenuButton hamburgerMenu" href="#">
-                        <img src="resources/img/icons/hmenu.svg" class="hamburgerMenuBar">
-                    </a>
                 </div>
             </div>
+        </nav>
+        <div class="nav_space"></div>
+        <div class="container container-right">
+            <div id="sub-menu">
+            </div>
         </div>
-    </nav>
-    <div class="nav_space"></div>
-    <div class="container container-right">
-        <div id="menu">
-        </div>
-    </div>
 
 
-    <noscript style="background-color: red; font-style: italic;">
-        <br><br>
-        <p>Your browser has no support for JavaScript, without this technology you cannot properly browser in this
-            website.</p>
+        <noscript style="background-color: red; font-style: italic;">
+            <br><br>
+            <p>Your browser has no support for JavaScript, without this technology you cannot properly browser in this
+                website.</p>
 
-        <p>Please activate support for this technology in your browser or use one with support for it like <a
-                href="https://www.mozilla.org/firefox/" target="_blank">Mozilla Firefox</a> or <a
-                href="https://www.google.com/intl/chrome/" target="_blank">Google Chrome</a>.</p>
-    </noscript>
+            <p>Please activate support for this technology in your browser or use one with support for it like <a
+                    href="https://www.mozilla.org/firefox/" target="_blank">Mozilla Firefox</a> or <a
+                    href="https://www.google.com/intl/chrome/" target="_blank">Google Chrome</a>.</p>
+        </noscript>
 
-    <section id="about">
         <div class="container">
+            <section class="mainBox" id="main_box">
 
-            <br>
-            <div class="imgTextIntroduction">
-                <img src="resources/img/photos/hmslima.jpg" class="mainPhoto">
-                <div id="write">
-                </div>
-            </div>
-
-            <noscript>
-                <p>Welcome to the website of Henrique Matheus da Silva Lima, a Brazilian programmer passionate about
-                    software development.</p>
-            </noscript>
-
-
-            <div class="nav_space" id="my_stacks"></div>
-            <h1 id="my_stacks_">My Stacks</h1>
-
-            <div class="cardContainer">
-
-                <div class="cardStacks">
-                    <div class="cardTitleStacks" id="java_development_">Java Development</div>
-                    <div class="cardBodyStacks">
-                        <div class="stack">
-                            JAVA
-                            <img class="svgStack" src="resources/img/stacks/java.svg" alt="Java">
-                        </div>
-                        <div class="stack">
-                            JDBC
-                            <img class="svgStack" src="resources/img/stacks/jdbc.svg" alt="JDBC">
-                        </div>
-                        <div class="stack">
-                            Hibernate
-                            <img class="svgStack" src="resources/img/stacks/hibernate.svg" alt="Hibernate">
-                        </div>
-                        <div class="stack">
-                            Spring
-                            <img class="svgStack" src="resources/img/stacks/spring.svg" alt="Spring">
-                        </div>
-                        <div class="stack">
-                            JUnit
-                            <img class="svgStack" src="resources/img/stacks/junit.svg" alt="JUnit">
-                        </div>
-                        <div class="stack">
-                            <span id="microservices_">Microservices</span>
-                            <img class="svgStack" src="resources/img/stacks/microservices.svg" alt="Microservices">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cardStacks">
-                    <div class="cardTitleStacks" id="other_languages_">Other Languages</div>
-                    <div class="cardBodyStacks">
-                        <div class="stack">
-                            C
-                            <img class="svgStack" src="resources/img/stacks/c.svg" alt="C">
-                        </div>
-                        <div class="stack">
-                            JavaScript
-                            <img class="svgStack" src="resources/img/stacks/javascript.svg" alt="JavaScript">
-                        </div>
-                        <div class="stack">
-                            TypeScript
-                            <img class="svgStack" src="resources/img/stacks/typescript.svg" alt="TypeScript">
-                        </div>
-                        <div class="stack">
-                            Python
-                            <img class="svgStack" src="resources/img/stacks/python.svg" alt="C++">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cardStacks">
-                    <div class="cardTitleStacks" id="more_backend_technologies_">More Back-end Technologies</div>
-                    <div class="cardBodyStacks">
-                        <div class="stack">
-                            Node.js
-                            <img class="svgStack" src="resources/img/stacks/nodejs.svg" alt="Node.js">
-                        </div>
-                        <div class="stack">
-                            MySQL
-                            <img class="svgStack" src="resources/img/stacks/mysql.svg" alt="SQL">
-                        </div>
-                        <div class="stack">
-                            PostgreSQL
-                            <img class="svgStack" src="resources/img/stacks/postgresql.svg" alt="PostgreSQL">
-                        </div>
-                        <div class="stack">
-                            MongoDB
-                            <img class="svgStack" src="resources/img/stacks/mongodb.svg" alt="MongoDB">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cardStacks">
-                    <div class="cardTitleStacks">Front-end</div>
-                    <div class="cardBodyStacks">
-                        <div class="stack">
-                            HTML
-                            <img class="svgStack" src="resources/img/stacks/html.svg" alt="HTML">
-                        </div>
-                        <div class="stack">
-                            CSS
-                            <img class="svgStack" src="resources/img/stacks/css.svg" alt="CSS">
-                        </div>
-                        <div class="stack">
-                            JavaScript
-                            <img class="svgStack" src="resources/img/stacks/javascript.svg" alt="JavaScript">
-                        </div>
-                        <div class="stack">
-                            Bootstrap
-                            <img class="svgStack" src="resources/img/stacks/bootstrap.svg" alt="Bootstrap">
-                        </div>
-                        <div class="stack">
-                            Angular
-                            <img class="svgStack" src="resources/img/stacks/angular.svg" alt="Angular">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cardStacks">
-                    <div class="cardTitleStacks" id="tools_">Tools</div>
-                    <div class="cardBodyStacks">
-                        <div class="stack">
-                            Git
-                            <img class="svgStack" src="resources/img/stacks/git.svg" alt="Git">
-                        </div>
-                        <div class="stack">
-                            Maven
-                            <img class="svgStack" src="resources/img/stacks/maven.svg" alt="Maven">
-                        </div>
-                        <div class="stack">
-                            Postman
-                            <img class="svgStack" src="resources/img/stacks/postman.svg" alt="Postman">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cardStacks">
-                    <div class="cardTitleStacks" id="concepts_">Concepts</div>
-                    <div class="cardBodyStacks">
-                        <div class="stack">
-                            MVC
-                            <img class="svgStack" src="resources/img/stacks/MVC.svg" alt="MVC">
-                        </div>
-                        <div class="stack">
-                            Scrum
-                            <img class="svgStack" src="resources/img/stacks/scrum.svg" alt="Scrum">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <br>
-            <p>You can see what I can do in <a href="#programmingprojects">Programming projects</a>.</p>
-
-
-            <div class="nav_space" id="contact"></div>
-            <h1 id="contact_">Contact</h1>
-
-            <p><img src="resources/img/icons/email.svg" class="imgText"> <a href="mailto:hmslima1992@gmail.com"
-                    target="_blank">E-mail</a></p>
-
-            <p><img src="resources/img/icons/github.svg" class="imgText"> <a href="https://github.com/hmslima/"
-                    target="_blank">GitHub</a></p>
-
-            <p><img src="resources/img/icons/linkedin.svg" class="imgText"> <a
-                    href="https://www.linkedin.com/in/henrique-matheus-da-silva-lima/" target="_blank">LinkedIn</a></p>
-
-            <p><img src="resources/img/icons/twitter.svg" class="imgText"> <a href="https://twitter.com/hmslima_"
-                    target="_blank">Twitter</a></p>
-
-            <br>
-
-            <p><img src="resources/img/icons/curriculum.svg" class="imgText"> <a href="download/curriculo.pdf"
-                    target="_blank" id="resume_">Resume <i>(in Portuguese)</i></a></p>
-
+            </section>
         </div>
-    </section>
+        
+        <footer>Copyright © Henrique Matheus da Silva Lima.</footer>
 
-    <section class="new_section">
-        <div class="nav_space" id="programmingprojects"></div>
-        <div class="container">
-            <h1 id="programmingprojects_">My Main Programming Projects</h1>
-
-            <div class="cardContainer">
-                <div class="card">
-                    <div class="cardTitle">
-                        <h3>Mural de recados</h3>
-                    </div>
-                    <div class="cardBody">
-                        <p>A simple Message Board made with Java and Spring Boot in the back-end, and Angular in the front-end</p>
-                        <br>
-                        <a class="linkWithWhiteBg" href="https://mural-deploy.vercel.app/" target="_blank">See project</a>
-                        <br><br>
-                        <a class="linkWithWhiteBg" href="https://github.com/hmslima/mural_de_recados" target="_blank">GitHub page</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="cardTitle">
-                        <h3>JS-Dictionar</h3>
-                    </div>
-                    <div class="cardBody">
-                        <p>A powerful dynamic dictionary contained in a single HTML file, you can use easily adapt it to your own dictionary. You can search in both languages, and the specific words are marked.</p>
-                        <br>
-                        <a class="linkWithWhiteBg" href="https://hmslima.github.io/JS-Dictionar/" target="_blank">Example</a>
-                        <br><br>
-                        <a class="linkWithWhiteBg" href="https://github.com/hmslima/JS-Dictionar" target="_blank">GitHub page</a>
-                    </div>
-                </div>
-            </div>
-
-            <p>If you want to see more projects, see my <a href="https://github.com/hmslima/"
-                    target="_blank">GitHub</a>.</p>
-        </div>
-    </section>
-
-    <footer>Copyright © Henrique Matheus da Silva Lima.</footer>
-</body>
-
+    </body>
 </html>
